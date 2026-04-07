@@ -1,0 +1,22 @@
+version: "1.0"
+metadata:
+  name: "CrisisResponsePlanner-OpenEnv"
+  author: "Opal Lab Engineer"
+  
+# Test Case 2: Typed Schemas
+observation_schema:
+  infrastructure: "Dict[str, int]"
+  zones: "Dict[str, Dict]"
+  inventory: "Dict[str, int]"
+
+action_schema:
+  zone: "String (Zone_1, Zone_2)"
+  dispatch: "Enum (medics, engineers, drones)"
+
+tasks:
+  - id: "urban_stabilization"
+    level: "easy"
+  - id: "industrial_containment"
+    level: "medium"
+  - id: "grid_collapse_prevention"
+    level: "hard"
